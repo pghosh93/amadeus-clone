@@ -26,10 +26,10 @@ export default function SolutionDetailPage() {
 
   useEffect(() => {
     if (slug) {
-      api.getSolution(slug).then(setSolution).catch(() => {});
+      api.getSolution(slug).then(setSolution).catch(console.error);
       const industry = industryMap[slug];
       if (industry) {
-        api.getProducts(industry).then((p) => setProducts(p.slice(0, 6))).catch(() => {});
+        api.getProducts(industry).then((p) => setProducts(p.slice(0, 6))).catch(console.error);
       }
     }
   }, [slug]);

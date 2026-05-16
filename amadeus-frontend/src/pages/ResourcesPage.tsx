@@ -17,7 +17,7 @@ export default function ResourcesPage() {
   const allCategories = [...new Set(articles.map((a) => a.category))];
 
   useEffect(() => {
-    api.getNews().then(setArticles).catch(() => {});
+    api.getNews().then(setArticles).catch(console.error);
   }, []);
 
   const filtered = selectedCategory

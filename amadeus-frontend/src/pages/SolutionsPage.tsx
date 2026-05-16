@@ -23,7 +23,7 @@ export default function SolutionsPage() {
   const [solutions, setSolutions] = useState<Solution[]>([]);
 
   useEffect(() => {
-    api.getSolutions().then(setSolutions).catch(() => {});
+    api.getSolutions().then(setSolutions).catch(console.error);
   }, []);
 
   return (

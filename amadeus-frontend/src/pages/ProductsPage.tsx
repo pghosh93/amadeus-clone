@@ -26,7 +26,7 @@ export default function ProductsPage() {
     api.getProducts().then((data) => {
       setProducts(data);
       setFiltered(data);
-    }).catch(() => {});
+    }).catch(console.error);
   }, []);
 
   useEffect(() => {

@@ -10,7 +10,7 @@ export default function ArticleDetailPage() {
 
   useEffect(() => {
     if (slug) {
-      api.getNewsArticle(slug).then(setArticle).catch(() => {});
+      api.getNewsArticle(slug).then(setArticle).catch(console.error);
     }
   }, [slug]);
 

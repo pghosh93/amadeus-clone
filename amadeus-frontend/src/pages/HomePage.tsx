@@ -62,7 +62,7 @@ export default function HomePage() {
   const [news, setNews] = useState<NewsArticle[]>([]);
 
   useEffect(() => {
-    api.getNews().then(setNews).catch(() => {});
+    api.getNews().then(setNews).catch(console.error);
   }, []);
 
   useEffect(() => {

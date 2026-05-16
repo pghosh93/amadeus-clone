@@ -15,8 +15,8 @@ export default function ProductDetailPage() {
         setProduct(p);
         api.getProducts(p.industry).then((all) => {
           setRelated(all.filter((r) => r.slug !== slug).slice(0, 3));
-        }).catch(() => {});
-      }).catch(() => {});
+        }).catch(console.error);
+      }).catch(console.error);
     }
   }, [slug]);
 

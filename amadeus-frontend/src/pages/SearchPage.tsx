@@ -15,7 +15,7 @@ export default function SearchPage() {
     if (q) {
       setQuery(q);
       setLoading(true);
-      api.search(q).then(setResults).catch(() => {}).finally(() => setLoading(false));
+      api.search(q).then(setResults).catch(console.error).finally(() => setLoading(false));
     }
   }, [searchParams]);
 
