@@ -1,0 +1,10 @@
+.env
+node_modules/
+dist/
+target/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+amadeus-backend/target/
